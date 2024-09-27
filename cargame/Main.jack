@@ -1,0 +1,20 @@
+class Main {
+    function void main() {
+        var Car myCar;  // Declara uma variável para o carro
+
+        // Inicializa o carro na posição (x, y) = (50, 50) com tamanho = 1
+        let myCar = Car.new(50, 50, 1);
+
+        // Desenha o carro
+        do myCar.draw();
+
+        // Mantém o programa rodando indefinidamente
+        while (true) {
+            // Aguarda um curto período para não sobrecarregar o loop
+            do Sys.wait(10);
+        }
+
+        // Adiciona um return no final para evitar erro de compilação
+        return;
+    }
+}

@@ -1,0 +1,37 @@
+class jogo{
+    constructor jogo new(){
+        do Output.moveCursor(1,4);
+        do Output.printString("penis");
+        return this;    
+    }
+
+      method void run(){
+        var char key;
+        var boolean exit;
+        let exit = false;
+
+        while(~exit){
+            while (key = 0){
+                let key = Keyboard.keyPressed();
+            }
+            if (key = 81) { let exit = true; } // tecla q acaba o jogo
+           
+            }
+        
+
+            while (~(key = 0)) {
+                let key = Keyboard.keyPressed();
+            }
+          return;
+        } 
+
+        
+     /** Disposes this game. */
+   method void dispose() {
+      do personagem.dispose();
+      do Memory.deAlloc(this);
+      return;
+   }
+}
+    
+

@@ -1,0 +1,37 @@
+class TheCar {
+    field int x, y;
+    field int size;
+
+    /** Construtor da classe TheCar */
+    constructor TheCar new(int Ax, int Ay, int Asize) {
+        let x = Ax;
+        let y = Ay;
+        let size = Asize;
+        return this; // Retorna a instância atual da classe
+    }
+
+    /** Método para desenhar o carro */
+    method void draw() {
+        var int memAddress;
+        let memAddress = 16384 + (y * 256) + x; // Calcula o endereço na memória baseado na posição (x, y)
+        
+        // Desenha o carro usando o sprite fornecido
+        do Memory.poke(memAddress + 0, 960);
+        do Memory.poke(memAddress + 32, 1056);
+        do Memory.poke(memAddress + 64, 2064);
+        do Memory.poke(memAddress + 96, 12300);
+        do Memory.poke(memAddress + 128, 12300);
+        do Memory.poke(memAddress + 160, 12300);
+        do Memory.poke(memAddress + 192, 4104);
+        do Memory.poke(memAddress + 224, 4104);
+        do Memory.poke(memAddress + 256, 4104);
+        do Memory.poke(memAddress + 288, 4104);
+        do Memory.poke(memAddress + 320, 4104);
+        do Memory.poke(memAddress + 352, 12300);
+        do Memory.poke(memAddress + 384, 12300);
+        do Memory.poke(memAddress + 416, 16380);
+        do Memory.poke(memAddress + 448, 12300);
+        do Memory.poke(memAddress + 480, 0);
+        return;
+    }   
+}

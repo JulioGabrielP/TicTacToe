@@ -1,0 +1,21 @@
+function Main.main 1
+push constant 50
+push constant 50
+push constant 1
+call Car.new 3
+pop local 0
+push local 0
+call Car.draw 1
+pop temp 0
+label WHILE_EXP0
+push constant 0
+not
+not
+if-goto WHILE_END0
+push constant 10
+call Sys.wait 1
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
